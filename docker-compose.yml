@@ -1,0 +1,67 @@
+services:
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - congress_network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://backend:8000/api
+      - HOST=0.0.0.0
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/usr/src/app/frontend
+      - /usr/src/app/frontend/node_modules
+    networks:
+      - congress_network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017
+      - PINECONE_API_KEY=${PINECONE_API_KEY}
+      - PINECONE_ENVIRONMENT=${PINECONE_ENVIRONMENT}
+      - PINECONE_INDEX_NAME=${PINECONE_INDEX_NAME}
+      - CONGRESS_API_KEY=${CONGRESS_API_KEY}
+    depends_on:
+      - mongodb
+    volumes:
+      - ./backend:/usr/src/app/backend
+    networks:
+      - congress_network
+
+  mongodb:
+    image: mongo:latest
+    container_name: congress_bills_db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    restart: unless-stopped
+    networks:
+      - congress_network
+
+volumes:
+  mongodb_data:
+    name: congress_bills_mongodb_data
+
+networks:
+  congress_network:
+    name: congress_network

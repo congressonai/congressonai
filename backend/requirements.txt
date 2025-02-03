@@ -1,0 +1,14 @@
+fastapi==0.109.2
+uvicorn==0.27.1
+httpx==0.26.0
+pymongo~=4.9.1
+requests
+motor~=3.6.0
+python-dotenv
+pydantic
+langchain==0.1.0
+openai==1.6.1
+tiktoken==0.5.2
+pinecone-client
+aiohttp~=3.11
+playwright==1.39.0

@@ -1,0 +1,15 @@
+.venv
+.idea
+dist
+node_modules
+.DS_Store
+.env
+*.pyc
+__pycache__/
+bin/
+connect.sh
+venv/
+*.swp
+/scripts
+*/logs
+/backend/twitter_integration
