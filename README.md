@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://i.imgur.com/DWFSLEe.png" alt="congressonai" width="30%"/>
+  <img src="https://i.imgur.com/lqf0MBW.png" alt="congressonai" width="30%"/>
 </div>
 <hr>
 
