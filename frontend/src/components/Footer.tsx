@@ -17,7 +17,7 @@ export function Footer() {
               <Twitter className="w-5 h-5" />
             </a>
             <a
-              href="https://github.com/congressbillsai"
+              href="https://github.com/congressonai/congressonai"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-primary-500 transition-colors"
