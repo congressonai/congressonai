@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: "Rajdhani", serif !important;
+}
+
 @layer base {
   :root {
     /* Primary colors */
