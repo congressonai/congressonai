@@ -33,13 +33,29 @@ export function Footer() {
               <Send className="w-5 h-5" />
             </a>
           </div>
-          <nav className="flex items-center space-x-6">
-          <Link to="/" className="text-gray-500 hover:text-primary-500 transition-colors">
+          <nav className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
+            {import.meta.env.VITE_TOKEN_CA && <Link 
+              to={`https://dexscreener.com/solana/${import.meta.env.VITE_TOKEN_CA}`} 
+              className="text-gray-500 hover:text-primary-500 transition-colors text-center"
+            >
               $CONGRESS
-            </Link>
-            <Link to="/faq" className="text-gray-500 hover:text-primary-500 transition-colors">
+            </Link>}
+            <div className="separator hidden md:block"></div>
+            <Link 
+              to="/faq" 
+              className="text-gray-500 hover:text-primary-500 transition-colors text-center"
+            >
               FAQ
             </Link>
+            <div className="separator hidden md:block"></div>
+            {import.meta.env.VITE_TOKEN_CA && (
+              <Link 
+                to={`https://dexscreener.com/solana/${import.meta.env.VITE_TOKEN_CA}`} 
+                className="text-gray-500 hover:text-primary-500 transition-colors text-center text-sm md:text-base break-all px-2"
+              > 
+                CA: {import.meta.env.VITE_TOKEN_CA} 
+              </Link>
+            )}
           </nav>
         </div>
       </div>

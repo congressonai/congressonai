@@ -75,6 +75,9 @@
   .desktop {
     display: none;
   }
+  .mobileMenu {
+    top: 75px !important;
+  }
 }
 @media (min-width: 768px) {
   .mobile {

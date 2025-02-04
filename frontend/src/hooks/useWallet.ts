@@ -14,7 +14,7 @@ export function useWallet() {
       const { publicKey, balance } = await connectWallet();
       setWalletState({
         connected: true,
-        publicKey,
+        publicKey: publicKey || null,
         balance,
       });
     } catch (error) {

@@ -19,6 +19,7 @@ services:
       - "5173:5173"
     environment:
       - VITE_API_URL=http://backend:8000/api
+      - VITE_TOKEN_CA=${VITE_TOKEN_CA}
       - HOST=0.0.0.0
     depends_on:
       - backend

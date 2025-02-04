@@ -24,9 +24,13 @@ export function Header() {
               FAQ
             </Link>
             <div className="separator"></div>
-            <Link to="/" className="text-primary-500 hover:text-primary-700 transition-colors font-bold">
-              $CONGRESS
-            </Link>
+            {import.meta.env.VITE_TOKEN_CA && <Link to={`https://dexscreener.com/solana/${import.meta.env.VITE_TOKEN_CA}`} className="text-primary-500 hover:text-primary-700 transition-colors font-bold">
+                $CONGRESS
+              </Link>}
+              <div className="separator"></div>
+              {import.meta.env.VITE_TOKEN_CA && <Link to={`https://dexscreener.com/solana/${import.meta.env.VITE_TOKEN_CA}`} className="text-primary-500 hover:text-primary-700 transition-colors font-bold">
+                CA: {import.meta.env.VITE_TOKEN_CA}
+              </Link>}
           </div>
         
 

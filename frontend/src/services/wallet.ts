@@ -10,7 +10,7 @@ export const connectWallet = async () => {
     const balance = await connection.getBalance(wallet.publicKey!);
     return {
       publicKey: wallet.publicKey?.toString(),
-      balance: balance / 1e9, // Convert lamports to SOL
+      balance: balance / 1e9, 
     };
   } catch (error) {
     console.error('Wallet connection error:', error);

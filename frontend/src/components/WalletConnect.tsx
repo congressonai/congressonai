@@ -3,7 +3,7 @@ import { Wallet } from 'lucide-react';
 import { useWallet } from '../hooks/useWallet';
 
 export function WalletConnect() {
-  const { connected, publicKey, balance, connect, disconnect } = useWallet();
+  const { connected, publicKey, balance,connect, disconnect } = useWallet();
 
   return (
     <div className="relative ml-4">
