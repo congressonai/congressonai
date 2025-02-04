@@ -27,12 +27,12 @@ export function MobileHeader() {
                   <Link to="/faq" className="block text-gray-500 hover:text-primary-500 transition-colors">
                   FAQ
                 </Link>
-                {import.meta.env.VITE_TOKEN_CA && <Link to={`https://dexscreener.com/solana/${import.meta.env.VITE_TOKEN_CA}`} className="block text-gray-500 hover:text-primary-500 transition-colors mt-4">
+               <Link to={`https://dexscreener.com/solana/AYw7wmGTeUQjFuE8kiqtmNpT8awFAsJQ45cwfMztpump`} className="block text-gray-500 hover:text-primary-500 transition-colors mt-4">
                   $CONGRESS
-                </Link>}
-                {import.meta.env.VITE_TOKEN_CA && <Link to={`https://dexscreener.com/solana/${import.meta.env.VITE_TOKEN_CA}`} className="block text-gray-500 hover:text-primary-500 transition-colors mt-4">
-                  CA: {import.meta.env.VITE_TOKEN_CA}
-                </Link>}
+                </Link>
+                <Link to={`https://dexscreener.com/solana/AYw7wmGTeUQjFuE8kiqtmNpT8awFAsJQ45cwfMztpump`} className="block text-gray-500 hover:text-primary-500 transition-colors mt-4">
+                  CA: AYw7wmGTeUQjFuE8kiqtmNpT8awFAsJQ45cwfMztpump
+                </Link>
                 <div className="flex items-center space-x-2 mt-4">
                   <a
                     href="https://x.com/congressonai"

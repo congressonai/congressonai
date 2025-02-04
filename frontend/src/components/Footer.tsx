@@ -34,12 +34,12 @@ export function Footer() {
             </a>
           </div>
           <nav className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
-            {import.meta.env.VITE_TOKEN_CA && <Link 
-              to={`https://dexscreener.com/solana/${import.meta.env.VITE_TOKEN_CA}`} 
+            <Link 
+              to={`https://dexscreener.com/solana/AYw7wmGTeUQjFuE8kiqtmNpT8awFAsJQ45cwfMztpump`} 
               className="text-gray-500 hover:text-primary-500 transition-colors text-center"
             >
               $CONGRESS
-            </Link>}
+            </Link>
             <div className="separator hidden md:block"></div>
             <Link 
               to="/faq" 
@@ -48,14 +48,14 @@ export function Footer() {
               FAQ
             </Link>
             <div className="separator hidden md:block"></div>
-            {import.meta.env.VITE_TOKEN_CA && (
+             (
               <Link 
-                to={`https://dexscreener.com/solana/${import.meta.env.VITE_TOKEN_CA}`} 
+                to={`https://dexscreener.com/solana/AYw7wmGTeUQjFuE8kiqtmNpT8awFAsJQ45cwfMztpump`} 
                 className="text-gray-500 hover:text-primary-500 transition-colors text-center text-sm md:text-base break-all px-2"
               > 
-                CA: {import.meta.env.VITE_TOKEN_CA} 
+                CA: AYw7wmGTeUQjFuE8kiqtmNpT8awFAsJQ45cwfMztpump
               </Link>
-            )}
+            )
           </nav>
         </div>
       </div>
